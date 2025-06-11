@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rMwe1MMXwKI=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\QRGenerator\\QRGenerator\\QRGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
