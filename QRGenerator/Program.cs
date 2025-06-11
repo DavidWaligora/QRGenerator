@@ -1,4 +1,5 @@
 ﻿using QRCoder;
+using System.Diagnostics;
 using static QRCoder.PayloadGenerator;
 
 bool end = false;
@@ -46,11 +47,15 @@ void GenerateQRCode(string url)
     using PngByteQRCode qrCode = new(qrCodeData);
     byte[] qrCodeImage = qrCode.GetGraphic(20);
 
-    // Save to base directory
-    string directory = Path.Combine("QRGenerator", "QRCodes");
-    Directory.CreateDirectory(directory); // Ensure directory exists
+    // Navigate to /src directory
+    // Get current directory(bin/ Debug / netX.X)
+    string binDir = Directory.GetCurrentDirectory();
 
-    string fileName = Path.Combine(directory, $"{url}.png");
+    string? projectRoot = Directory.GetParent(binDir)?.Parent?.Parent?.FullName;
+    string targetDir = Path.Combine(projectRoot!, "src");
+
+    Directory.CreateDirectory(targetDir);
+    string fileName = Path.Combine(targetDir, $"{url}.png");
     File.WriteAllBytes(fileName, qrCodeImage);
 
     Console.WriteLine($"QR code saved successfully to: {fileName}");

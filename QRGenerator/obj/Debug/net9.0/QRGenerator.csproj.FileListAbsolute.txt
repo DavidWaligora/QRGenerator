@@ -15,3 +15,4 @@ C:\Projects\QRGenerator\QRGenerator\obj\Debug\net9.0\ref\QRGenerator.dll
 C:\Projects\QRGenerator\QRGenerator\bin\Debug\net9.0\QRCoder.dll
 C:\Projects\QRGenerator\QRGenerator\obj\Debug\net9.0\QRGenerator.csproj.AssemblyReference.cache
 C:\Projects\QRGenerator\QRGenerator\obj\Debug\net9.0\QRGenera.7BE00453.Up2Date
+C:\Projects\QRGenerator\QRGenerator\obj\Debug\net9.0\QRGenerator.sourcelink.json
