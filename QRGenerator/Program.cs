@@ -51,11 +51,12 @@ void GenerateQRCode(string url)
     // Get current directory(bin/ Debug / netX.X)
     string binDir = Directory.GetCurrentDirectory();
 
-    string? projectRoot = Directory.GetParent(binDir)?.Parent?.Parent?.FullName;
-    string targetDir = Path.Combine(projectRoot!, "src");
+    string downloadsPath = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+    "Downloads"
+);
 
-    Directory.CreateDirectory(targetDir);
-    string fileName = Path.Combine(targetDir, $"{url}.png");
+    string fileName = Path.Combine(downloadsPath, $"{url}.png");
     File.WriteAllBytes(fileName, qrCodeImage);
 
     Console.WriteLine($"QR code saved successfully to: {fileName}");
