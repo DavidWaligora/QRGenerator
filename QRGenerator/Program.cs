@@ -55,8 +55,9 @@ void GenerateQRCode(string url)
     Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
     "Downloads"
 );
+    string uslpathwithoutslash = url.Replace("/", "");
+    string fileName = Path.Combine(downloadsPath, $"{uslpathwithoutslash}.png");
 
-    string fileName = Path.Combine(downloadsPath, $"{url}.png");
     File.WriteAllBytes(fileName, qrCodeImage);
 
     Console.WriteLine($"QR code saved successfully to: {fileName}");
