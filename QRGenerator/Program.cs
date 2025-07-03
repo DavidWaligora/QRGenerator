@@ -8,7 +8,6 @@ while (!end)
 {
     Console.Write("Enter the website URL to generate a QR code (or type 'exit' to quit) \"example: (test.com)\": ");
     string? url = Console.ReadLine()?.Trim();
-    url = url?.ToLower();
     if (string.IsNullOrEmpty(url) || url == "exit")
     {
         end = true;
