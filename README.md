@@ -1,2 +1,2 @@
-# QRGenerator
-C# QR Generator With  QRCoder (console app)
+# QRGenerator URL
+C# QR Generator With QRCoder (console app)
